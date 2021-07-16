@@ -24,4 +24,13 @@ function linkAction() {
 }
 navLink.forEach((e) => e.addEventListener("click", linkAction));
 
-// SWIPPER BEST PLACES
+// ADD BACKGROUND COLOR WHEN SCROLL DOWN THE WINDOW
+const scrollY = window.pageYOffset;
+function scrollActive() {
+  const header = document.getElementById("header");
+
+  this.scrollY >= 50
+    ? header.classList.add("scroll-active")
+    : header.classList.remove("scroll-active");
+}
+window.addEventListener("scroll", scrollActive);
